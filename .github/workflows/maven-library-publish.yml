@@ -31,15 +31,3 @@ jobs:
           MAVEN_USERNAME: ${{ secrets.NEXUS_USERNAME }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.NEXUS_PASSWORD }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-
-      - name: Set up JDK 11 for deploy to github packages
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: 11
-          server-id: github
-
-      - name: Publish to GitHub Packages Apache Maven
-        run: mvn --batch-mode deploy -PgithubDeploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.CI_TOKEN }}
