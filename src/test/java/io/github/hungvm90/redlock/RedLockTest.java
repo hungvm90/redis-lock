@@ -46,8 +46,8 @@ class RedLockTest {
     void testMultipleHost() {
         List<RedisClient> clients = new LinkedList<>();
         clients.add(new JedisClient("redis", 6379, 100));
-        clients.add(new JedisClient("redis", 6370, 100));
-        clients.add(new JedisClient("redis", 6371, 100));
+        clients.add(new JedisClient("redis2", 6370, 100));
+        clients.add(new JedisClient("redis3", 6371, 100));
         RedLock redLock = new RedLock(clients);
 
         var lock = redLock.lock("xxx", 5 * 1000).orElse(null);
@@ -74,8 +74,8 @@ class RedLockTest {
     void testConcurrentLock() throws Exception {
         List<RedisClient> clients = new LinkedList<>();
         clients.add(new JedisClient("redis", 6379, 100));
-        clients.add(new JedisClient("redis", 6370, 100));
-        clients.add(new JedisClient("redis", 6371, 100));
+        clients.add(new JedisClient("redis2", 6370, 100));
+        clients.add(new JedisClient("redis3", 6371, 100));
         RedLock redLock = new RedLock(clients, 100);
         AtomicInteger success = new AtomicInteger(0);
         ExecutorService executor = Executors.newCachedThreadPool();
