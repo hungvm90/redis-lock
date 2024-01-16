@@ -6,7 +6,7 @@
 
     <groupId>io.github.hungvm90</groupId>
     <artifactId>redis-lock</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>redis-lock</name>
@@ -79,7 +79,7 @@
     <licenses>
         <license>
             <name>Apache-2.0 License</name>
-            <url>https://github.com/hungvm90/gsonjavatime/blob/master/LICENSE</url>
+            <url>https://github.com/hungvm90/redis-lock/blob/master/LICENSE</url>
         </license>
     </licenses>
 
@@ -95,13 +95,13 @@
 
     <issueManagement>
         <system>github</system>
-        <url>https://github.com/hungvm90/gsonjavatime/issues</url>
+        <url>https://github.com/hungvm90/redis-lock/issues</url>
     </issueManagement>
 
     <scm>
-        <connection>scm:git:git://github.com/hungvm90/gsonjavatime.git</connection>
-        <developerConnection>scm:git:ssh://github.com:hungvm90/gsonjavatime.git</developerConnection>
-        <url>http://github.com/hungvm90/gsonjavatime</url>
+        <connection>scm:git:git://github.com/hungvm90/redis-lock.git</connection>
+        <developerConnection>scm:git:ssh://github.com:hungvm90/redis-lock.git</developerConnection>
+        <url>http://github.com/hungvm90/redis-lock</url>
     </scm>
 
     <profiles>
@@ -196,7 +196,7 @@
                 <repository>
                     <id>github</id>
                     <name>GitHub hungvm90 Apache Maven Packages</name>
-                    <url>https://maven.pkg.github.com/hungvm90/gsonjavatime</url>
+                    <url>https://maven.pkg.github.com/hungvm90/redis-lock</url>
                 </repository>
             </distributionManagement>
         </profile>
