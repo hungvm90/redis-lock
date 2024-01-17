@@ -6,7 +6,7 @@
 
     <groupId>io.github.hungvm90</groupId>
     <artifactId>redis-lock</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <name>redis-lock</name>
@@ -51,12 +51,14 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>2.0.11</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
             <version>2.0.11</version>
+            <scope>provided</scope>
         </dependency>
 
 
@@ -227,19 +229,6 @@
             <plugin>
                 <artifactId>maven-install-plugin</artifactId>
                 <version>3.1.1</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>${maven.shade}</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <artifactId>maven-site-plugin</artifactId>
